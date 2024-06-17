@@ -1,0 +1,28 @@
+﻿@model CreateContactForm
+
+@{
+    ViewData["Title"] = "Page de création de contact";
+}
+
+@if (!ViewContext.ModelState.IsValid)
+{
+    @Html.ValidationSummary(false, $"Le formulaire contient {ViewContext.ModelState.ErrorCount} erreur(s)");
+}
+<form class="form-enregistrement" method="post">
+    <div class="form-register">
+        <label>Prenom</label>
+        @Html.EditorFor(model => model.Prenom, new {@class="form-control"}) <br />
+        @Html.ValidationMessageFor(expression: model => model.Prenom, message: null, htmlAttributes: new { @class="text-danger"} )
+    </div>
+    <div class="form-register">
+        <label>nom</label>
+        @Html.EditorFor(model => model.Nom, new { @class = "form-control" }) <br /> <br />
+        @Html.ValidationMessageFor(expression: model => model.Nom, message: null, htmlAttributes: new { @class = "text-danger" })
+    </div>
+    <div class="form-register">
+        <label>email</label>
+        @Html.EditorFor(model => model.Email, new { @class = "form-control" }) <br /> <br />
+        @Html.ValidationMessageFor(expression: model => model.Email, message: null, htmlAttributes: new { @class = "text-danger" })
+    </div>
+    <button class="form-register-btn" type="submit" value="send">Enregister le contact</button>
+</form>

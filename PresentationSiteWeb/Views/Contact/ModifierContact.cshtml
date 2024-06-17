@@ -1,0 +1,21 @@
+﻿@model Contact;
+@{
+    ViewData["Title"] = "Page de modification de contact";
+}
+
+<form class="form-enregistrement" method="post">
+    <div class="form-register">
+        <label>Prenom</label>
+        <input type="text" name="Prenom" placeholder="John" required />
+    </div>
+    <div class="form-register">
+        <label>nom</label>
+        <input type="text" name="nom" placeholder="Doe" required />
+    </div>
+    <div class="form-register">
+        <label>email</label>
+        <input type="email" name="email" placeholder="exemple@hotmail.fr" required />
+    </div>
+    <button class="form-register-btn" type="submit" value="send">Modifier contact</button>
+</form>
+

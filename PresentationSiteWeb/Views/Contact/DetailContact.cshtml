@@ -1,0 +1,22 @@
+﻿@model Contact;
+@{
+    ViewData["Title"] = "Page detail de contact";
+}
+
+<h1>Gestion contact</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Prenom</th>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Id</th>
+        </tr>
+    </thead>
+    <tr>
+        <td>@Model.Prenom</td>
+        <td>@Model.Nom</td>
+        <td>@Model.Email</td>
+        <td>@Model.Id</td>
+    </tr>
+</table>

@@ -1,0 +1,22 @@
+﻿@{
+
+    Random random = new Random();
+    int value = random.Next(1, 20);
+    ViewData["Title"] = "Page d'accueil";
+}
+
+<h2>Mon site web</h2>
+<p>Vous avez obtenu un score de : @value</p>
+@if(value == 20)
+{
+    <p>Vous avez le maximum</p>
+} 
+else if (value >= 10)
+{
+    <p>Vous êtes au-dessus de la moyenne</p>
+} 
+else if (value < 10)
+{
+    <p>Vous êtes en-dessous de la moyenne</p>
+}
+
